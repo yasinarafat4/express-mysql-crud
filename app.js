@@ -26,16 +26,18 @@ console.log("MySQL Connected Successfully!");
 
 // CRUD Operations
 // Insert:
+// -------
 // try {
 //   await db.execute(`
 //     INSERT INTO users(name, email) VALUES(?,?)
-//   `, ['Ambia', 'ambia@gmail.com']);
+//   `, ['Yasin', 'yasin@gmail.com']);
 //   console.log("User inserted successfully!");
 // } catch (error) {
 //   console.error("Insert failed:", error.message);
 // }
 
 // Read:
+// -----
 // try {
 //   const [rows] = await db.execute("SELECT * FROM users");
 //   console.log("Users fetched successfully:");
@@ -45,3 +47,18 @@ console.log("MySQL Connected Successfully!");
 // }
 
 // Update:
+// -------
+// try {
+//     const [result] = await db.execute(
+//       "UPDATE users SET name = ?, email = ? WHERE id = ?",
+//       ['Arafat', 'arafat@gmail.com', 1]
+//     );
+
+//     if (result.affectedRows > 0) {
+//       console.log("User updated successfully!");
+//     } else {
+//       console.log("No user found with the given ID.");
+//     }
+//   } catch (error) {
+//     console.error("Failed to update user:", error.message);
+//   }
