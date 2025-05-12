@@ -26,11 +26,22 @@ console.log("MySQL Connected Successfully!");
 
 // CRUD Operations
 // Insert:
-try {
-  await db.execute(`
-    INSERT INTO users(name, email) VALUES('Ambia', 'ambia@gmail.com')
-  `);
-  console.log("User inserted successfully!");
-} catch (error) {
-  console.error("Insert failed:", error.message);
-}
+// try {
+//   await db.execute(`
+//     INSERT INTO users(name, email) VALUES(?,?)
+//   `, ['Ambia', 'ambia@gmail.com']);
+//   console.log("User inserted successfully!");
+// } catch (error) {
+//   console.error("Insert failed:", error.message);
+// }
+
+// Read:
+// try {
+//   const [rows] = await db.execute("SELECT * FROM users");
+//   console.log("Users fetched successfully:");
+//   console.table(rows); 
+// } catch (error) {
+//   console.error("Failed to fetch users:", error.message);
+// }
+
+// Update:
